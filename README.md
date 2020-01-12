@@ -1,3 +1,3 @@
-# github-upload
+# Placeholder Project
 
 Just learning how to import my local projects to Github. I'll be replacing this soon with a real project.
