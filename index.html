@@ -4,10 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Javascript Sandbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="myown.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard Testing</title>
 </head>
-<body>
-    <h1>Javascript Sandbox</h1>
-    <script src="app.js"></script>
-</body>
+    <body class="fixed-sidebar fixed-nav fixed-nav-basic" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+        <div id="wrapper">
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                    <div class="sidebar-collapse" style="overflow: hidden; width: auto; height: 100%;">
+                        <ul class="nav metismenu" id="side-menu">
+                            <li class="nav-header">
+                                <div class="dropdown profile-element">
+                                    <div class="main-logo">
+                                        <img src="/logo-small.png" width="142" height="50">
+                                    </div>
+                                </div>
+                                <div class="logo-element">
+                                IN+
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-chart-line"></i> <span class="nav-label">Sales</span> <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li><a href="#">Quotes</a></li>
+                                    <li><a href="#">Sales Orders</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-layer-group"></i> <span class="nav-label">Purchases</span> <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse">
+                                    <li><a href="#">Purchase Orders</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Clients</span> <span class="fa arrow"></span></a>
+
+                                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                                    <li class="active">
+                                        <a href="/customers/">Customers</a>
+                                    </li>
+                                    <li><a href="#">Suppliers</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-calendar-alt"></i> <span class="nav-label">Planner</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-industry"></i> <span class="nav-label">Production</span></a>
+                            </li>
+                            <li>
+                                <a href="/inventory/"><i class="fa fa-box-open"></i> <span class="nav-label">Inventory</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-truck"></i> <span class="nav-label">Transport</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-cube"></i> <span class="nav-label">Resources</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-coins"></i> <span class="nav-label">Finance</span></a>
+                            </li>
+                            <li>
+                                <a href="/system/"><i class="fa fa-cog"></i> <span class="nav-label">System</span></a>
+                            </li>
+                            <li class="collapse-menu">
+                                <a href="#" class="navbar-minimalize"><i class="fa fa-bars"></i> <span class="nav-label">Collapse menu</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 492px;"></div>
+                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.9; z-index: 90; right: 1px;"></div>
+                </div>
+            </nav>
+
+            <div id="page-wrapper" class="gray-bg">
+                <!-- Header nav -->
+                <div class="row border-bottom">
+                    <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0;">
+                        <ul class="nav navbar-top-links navbar-right">                             
+                            <li>
+                                <div class="title-action">
+                                    <a href="/" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#page-modal">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-title">
+                                    <h3>Customers</h3>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-sign-out"></i> Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="wrapper wrapper-content" id="main">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Browse customers</h5>
+                                    <div class="ibox-tools">
+                                        <a href="/customers/new" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#page-modal">
+                                            New customer
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div id="dataTable_customers">
+                                        <div id="dt_wrapper" class="dataTables_wrapper no-footer">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table id="dt" class="table table-striped table-bordered table-hover data-table dataTable no-footer" role="grid" aria-describedby="dt_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting" tabindex="0" aria-controls="dt" rowspan="1" colspan="1" aria-label="dt.columns.id: activate to sort column ascending">
+                                                                    dt.columns.id
+                                                                </th>
+                                                                <th class="sorting" tabindex="0" aria-controls="dt" rowspan="1" colspan="1" aria-label="dt.columns.name: activate to sort column ascending">
+                                                                    dt.columns.name
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr id="1" role="row" class="odd">
+                                                                <td>1</td>
+                                                                <td>All Steels Limited</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div id="dt_processing" class="dataTables_processing" style="display: none;">Processing...</div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="dataTables_length" id="dt_length">
+                                                        <label>
+                                                            Show 
+                                                            <select name="dt_length" aria-controls="dt" class="">
+                                                                <option value="10">10</option>
+                                                                <option value="25">25</option>
+                                                                <option value="50">50</option>
+                                                                <option value="100">100</option>
+                                                                <option value="250">250</option>
+                                                                <option value="500">500</option>
+                                                                <option value="1000">1,000</option>
+                                                                <option value="2500">2,500</option>
+                                                            </select> 
+                                                            entries
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 text-right">
+                                                    <div class="dataTables_paginate paging_full_numbers" id="dt_paginate">
+                                                        <a class="paginate_button first disabled" aria-controls="dt" data-dt-idx="0" tabindex="-1" id="dt_first">First</a>
+                                                        <a class="paginate_button previous disabled" aria-controls="dt" data-dt-idx="1" tabindex="-1" id="dt_previous">Previous</a>
+                                                        <span>
+                                                            <a class="paginate_button current" aria-controls="dt" data-dt-idx="2" tabindex="0">1</a>
+                                                        </span>
+                                                        <a class="paginate_button next disabled" aria-controls="dt" data-dt-idx="3" tabindex="-1" id="dt_next">Next</a>
+                                                        <a class="paginate_button last disabled" aria-controls="dt" data-dt-idx="4" tabindex="-1" id="dt_last">Last</a>
+                                                    </div>
+                                                    <div class="dataTables_info" id="dt_info" role="status" aria-live="polite">Showing 1 to 1 of 1 entries</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <small>Copyright © 2020 Mount UK Ltd. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="page-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content"></div>
+            </div>
+        </div>
+        
+        <!-- SCRIPTS -->
+        <script src="runtime.js"></script>
+        <script src="vendor3.js"></script>
+        <script src="vendor2.js"></script>
+        <script src="vendor.js"></script>
+        <script src="slimscroll.js"></script>
+        <script src="metisMenu.js"></script>
+        <script src="app.js"></script>
+        <script>
+            $('#page-modal').on('show.bs.modal', function (e) {
+                $('.modal-content #main').remove();
+                $(this).find('.modal-content').load($(e.relatedTarget).attr('href')+' #main');
+            });
+        </script>
+        <script type="text/javascript" src="datatables-min.js"></script>
+        <script src="datatables.js"></script>
+        <script>
+            $(function() {
+                $('#dataTable_customers').initDataTables({"name":"dt","method":"POST","state":"fragment","options":{"language":{"url":"\/\/cdn.datatables.net\/plug-ins\/1.10.15\/i18n\/English.json"}}});
+            });
+        </script>
+        <script src="myown.js"></script>
+    </body>
 </html>
