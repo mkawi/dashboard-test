@@ -26,7 +26,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="/"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fas fa-chart-line"></i> <span class="nav-label">Sales</span> <span class="fa arrow"></span></a>
@@ -46,7 +46,7 @@
 
                                 <ul class="nav nav-second-level collapse in" aria-expanded="true">
                                     <li class="active">
-                                        <a href="/customers/">Customers</a>
+                                        <a href="#">Customers</a>
                                     </li>
                                     <li><a href="#">Suppliers</a></li>
                                     <li><a href="#">Contacts</a></li>
@@ -62,7 +62,7 @@
                                 <a href="#"><i class="fa fa-industry"></i> <span class="nav-label">Production</span></a>
                             </li>
                             <li>
-                                <a href="/inventory/"><i class="fa fa-box-open"></i> <span class="nav-label">Inventory</span></a>
+                                <a href="#"><i class="fa fa-box-open"></i> <span class="nav-label">Inventory</span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-truck"></i> <span class="nav-label">Transport</span></a>
@@ -74,7 +74,7 @@
                                 <a href="#"><i class="fa fa-coins"></i> <span class="nav-label">Finance</span></a>
                             </li>
                             <li>
-                                <a href="/system/"><i class="fa fa-cog"></i> <span class="nav-label">System</span></a>
+                                <a href="#"><i class="fa fa-cog"></i> <span class="nav-label">System</span></a>
                             </li>
                             <li class="collapse-menu">
                                 <a href="#" class="navbar-minimalize"><i class="fa fa-bars"></i> <span class="nav-label">Collapse menu</span></a>
@@ -91,16 +91,49 @@
                 <div class="row border-bottom">
                     <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0;">
                         <ul class="nav navbar-top-links navbar-right">                             
-                            <li>
-                                <div class="title-action">
-                                    <a href="/" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#page-modal">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                </div>
+                            <li class="dropdown">
+                                <a href="#" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" id="dropdown-nav" onclick="dim_div()"><i class="fas fa-plus dropdown-icon"></i></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="arrow"></div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <ul class="multi-column-dropdown">
+                                                <li><h4>Clients</h4></li>
+                                                <li><a href="#">Customers</a></li>
+                                                <li><a href="#">Suppliers</a></li>
+                                                <li><a href="#">Contacts</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <ul class="multi-column-dropdown">
+                                                <li><h4>Sales</h4></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Something</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <ul class="multi-column-dropdown">
+                                                <li><h4>Purchases</h4></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Something</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <ul class="multi-column-dropdown">
+                                                <li><h4>Tasks</h4></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Something</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
                             </li>
                             <li>
                                 <div class="header-title">
-                                    <h3>Customers</h3>
+                                    <h3>Dashboard Testing</h3>
                                 </div>
                             </li>
                         </ul>
@@ -120,7 +153,7 @@
                                 <div class="ibox-title">
                                     <h5>Browse customers</h5>
                                     <div class="ibox-tools">
-                                        <a href="/customers/new" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#page-modal">
+                                        <a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#page-modal">
                                             New customer
                                         </a>
                                     </div>
@@ -195,6 +228,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="modal fade" id="page-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content"></div>

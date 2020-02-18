@@ -1,0 +1,128 @@
+/* Page title spacing change */
+
+.header-title > h3 {
+	margin: auto;
+}
+
+/* Logo BG - Pointless */
+.nav-header {
+	background-image: url(/header-profile.png) !important;
+}
+
+/* Add new template button */
+
+.dropdown > .dropdown-toggle > i {
+	color: #ffffff;
+}
+
+.dropdown > .dropdown-toggle {
+	padding: 5px 10px;
+	min-height: auto;
+}
+
+.dropdown h4 {
+	margin-top: 0;
+}
+
+.dropdown > .dropdown-toggle > .dropdown-icon {
+	margin-right: 0;
+}
+
+.dropdown > .dropdown-toggle:hover {
+	background-color: #0769ab;
+	border-color: #0769ab;
+	color: #ffffff;
+}
+
+.nav.navbar-top-links > .dropdown > a:hover,
+.nav.navbar-top-links > .dropdown > a:focus {
+	background-color: #0769ab;
+}
+
+.dropdown-menu {
+	min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+	padding: 25px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.multi-column-dropdown > li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: #333;
+	white-space: normal;
+	font-size: 12px;
+}
+.multi-column-dropdown > li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #f3f3f4;
+}
+
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+
+/* overlay */
+
+#toggle_div {
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 999;
+}
+
+#backdrop {
+	transition: opacity 0.15s linear;
+}
+
+.popover.bottom > .arrow {
+	top: -11px;
+	left: 50%;
+	margin-left: -11px;
+	border-top-width: 0;
+	border-bottom-color: #999;
+	border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+.popover > .arrow,
+.popover > .arrow:after {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+
+.popover > .arrow:after {
+	content: "";
+	border-width: 10px;
+}
+
+.popover.bottom > .arrow:after {
+	top: 1px;
+	margin-left: -10px;
+	content: " ";
+	border-top-width: 0;
+	border-bottom-color: #fff;
+}
