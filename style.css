@@ -24948,3 +24948,11 @@ li.system-nested-list {
 .money-icon {
 	padding-left: 5px;
 }
+
+.navbar-fixed-top {
+	left: 220px;
+}
+
+body #page-wrapper {
+	margin: 60px 0 0 0;
+}

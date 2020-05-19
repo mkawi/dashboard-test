@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Dashboard Testing</title>
 </head>
-    <body class="fixed-sidebar fixed-nav fixed-nav-basic" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+<body class="" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
         <div id="wrapper">
             <nav class="navbar-default navbar-static-side" role="navigation">
                 <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
@@ -92,8 +92,9 @@
                     <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0;">
                         <ul class="nav navbar-top-links navbar-right">                             
                             <li class="dropdown">
-                                <a href="#" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" id="dropdown-nav" onclick="dim_div()"><i class="fas fa-plus dropdown-icon"></i></a>
-                                <ul class="dropdown-menu multi-column columns-3">
+                                <a href="#" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" id="dropdown-btn"><i class="fas fa-plus dropdown-icon"></i></a>
+                                <div class="modal-backdrop fade" id="dropdown-backdrop" style="display: none;"></div>
+                                <ul class="dropdown-menu multi-column columns-3" id="dropdown-menu" style="display: none;">
                                     <div class="arrow"></div>
                                     <div class="row">
                                         <div class="col-sm-3">
@@ -102,6 +103,11 @@
                                                 <li><a href="#">Customers</a></li>
                                                 <li><a href="#">Suppliers</a></li>
                                                 <li><a href="#">Contacts</a></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Something</a></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -110,6 +116,10 @@
                                                 <li><a href="#">Example</a></li>
                                                 <li><a href="#">Another</a></li>
                                                 <li><a href="#">Something</a></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
+                                                <li><a href="#">Something</a></li>
+                                                <li><a href="#">Example</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -118,6 +128,7 @@
                                                 <li><a href="#">Example</a></li>
                                                 <li><a href="#">Another</a></li>
                                                 <li><a href="#">Something</a></li>
+                                                <li><a href="#">Example</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
@@ -126,6 +137,8 @@
                                                 <li><a href="#">Example</a></li>
                                                 <li><a href="#">Another</a></li>
                                                 <li><a href="#">Something</a></li>
+                                                <li><a href="#">Example</a></li>
+                                                <li><a href="#">Another</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -133,6 +146,7 @@
                             </li>
                             <li>
                                 <div class="header-title">
+                                    <!-- <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a> -->
                                     <h3>Dashboard Testing</h3>
                                 </div>
                             </li>
@@ -228,6 +242,8 @@
                 </div>
             </div>
         </div>
+
+        </div>
         
         <div class="modal fade" id="page-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -243,19 +259,8 @@
         <script src="slimscroll.js"></script>
         <script src="metisMenu.js"></script>
         <script src="app.js"></script>
-        <script>
-            $('#page-modal').on('show.bs.modal', function (e) {
-                $('.modal-content #main').remove();
-                $(this).find('.modal-content').load($(e.relatedTarget).attr('href')+' #main');
-            });
-        </script>
         <script type="text/javascript" src="datatables-min.js"></script>
         <script src="datatables.js"></script>
-        <script>
-            $(function() {
-                $('#dataTable_customers').initDataTables({"name":"dt","method":"POST","state":"fragment","options":{"language":{"url":"\/\/cdn.datatables.net\/plug-ins\/1.10.15\/i18n\/English.json"}}});
-            });
-        </script>
         <script src="myown.js"></script>
     </body>
 </html>
