@@ -9,6 +9,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="switch.css" />
 		<title>Dashboard Testing</title>
 	</head>
 	<body class="" data-gr-c-s-loaded="true" cz-shortcut-listen="true">
@@ -44,6 +45,75 @@
 									placeholder="0.00"
 									disabled
 								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ibox">
+					<div class="ibox-content">
+						<div class="form-group row">
+							<div class="col-sm-3">
+								<label class="col-form-label">Length</label>
+								<div class="input-group">
+									<select
+										id="quote_employee"
+										name="quote[employee]"
+										required="required"
+										class="form-control js-replaceFormField"
+										data-replaceformfields="#employeeField"
+									>
+										<option value="" selected="selected"
+											>Choose sales lead</option
+										>
+									</select>
+
+									<input
+										class="to-labelauty-icon labelauty"
+										type="checkbox"
+										checked=""
+										id="labelauty-1"
+										style="display: none;"
+									/>
+									<label for="labelauty-1" class="ml-2">
+										<span class="labelauty-unchecked-image">
+											<i class="fa fa-lock"></i>
+										</span>
+										<span class="labelauty-checked-image">
+											<i class="fa fa-unlock"></i>
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<label class="col-form-label">Length</label>
+								<div class="input-group">
+									<input
+										type="text"
+										id="quote_employee"
+										name="quote[employee]"
+										required="required"
+										class="form-control js-replaceFormField"
+										data-replaceformfields="#employeeField"
+										disabled
+									/>
+
+									<input
+										class="to-labelauty-icon labelauty"
+										type="checkbox"
+										checked=""
+										id="labelauty"
+										style="display: none;"
+									/>
+									<label for="labelauty" class="ml-2">
+										<span class="labelauty-unchecked-image">
+											<i class="fa fa-lock"></i>
+										</span>
+										<span class="labelauty-checked-image">
+											<i class="fa fa-unlock"></i>
+										</span>
+									</label>
+								</div>
 							</div>
 						</div>
 					</div>
